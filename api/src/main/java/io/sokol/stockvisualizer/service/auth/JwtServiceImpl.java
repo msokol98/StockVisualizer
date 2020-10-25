@@ -14,7 +14,7 @@ import java.util.function.Function;
 @Service("jwtService")
 public class JwtServiceImpl implements JwtService {
 
-    private String SECRET_KEY = "8C452C8707AB22CFBC1333FAFBBCE561E11BCC1CE1301F2F004DFD72FE2C2D5E";
+    private String SECRET_KEY = System.getenv("JWT_KEY");
 
     @Override
     public String extractUsername(String token) {
