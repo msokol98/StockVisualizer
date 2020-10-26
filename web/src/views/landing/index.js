@@ -6,7 +6,7 @@ const home = () => {
   return (
     <Fragment>
 
-      <section className='hero is-medium orange'>
+      <section className='hero is-medium green'>
         <div className='hero-body'>
           <div className='container'>
 
@@ -53,7 +53,7 @@ const home = () => {
               <div className='column'>
               <div className='notification has-background-white bordered'>
                   <div className='home-icon-wrapper'>
-                    <img src='clock.png' alt='money' width='75'/>
+                    <img src='clock.png' alt='clock' width='75'/>
                   </div>
                   <h3 className='title has-text-weight-light'>Updated Daily</h3>
                   <h5 className='subtitle has-text-grey has-text-weight-light'>You'll find a tutor in no time.</h5>
@@ -66,7 +66,7 @@ const home = () => {
               <div className='column'>
               <div className='notification has-background-white bordered'>
                   <div className='home-icon-wrapper'>
-                    <img src='honesty.png' alt='money' width='75'/>
+                    <img src='honesty.png' alt='honesty' width='75'/>
                   </div>                  
                   <h3 className='title has-text-weight-light'>Honest Work</h3>
                   <h5 className='subtitle has-text-grey has-text-weight-light'>Family-friendly service for the community.</h5>
@@ -121,7 +121,7 @@ const home = () => {
         </div>
       </section>
 
-      <section className='section orange'>
+      <section className='section green'>
         <div className='container'>
           <div className='content has-text-centered'>
 

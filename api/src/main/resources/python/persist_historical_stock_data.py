@@ -10,8 +10,11 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 def parse_stock_data(symbol):
+
     csv_data = '../HistoricalStockData/{}.csv'.format(symbol)
     df = pd.read_csv(csv_data)
+
+    print(symbol)
 
     stock_data = []
 

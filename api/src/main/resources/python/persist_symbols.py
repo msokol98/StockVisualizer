@@ -14,11 +14,9 @@ cur = conn.cursor()
 for row in df.iterrows():
     data = row[1]
     symbol = data[0]
-    name = data[1]
-    sector = data[2]
 
-    cur.execute("INSERT INTO Stock(symbol, name, sector, current_share_price) values(%s, %s, %s, %s)", 
-        (symbol, name, sector, 0))
+    cur.execute("INSERT INTO Company (symbol) values(%s)",
+        (symbol, ))
 
 conn.commit()
 cur.close()

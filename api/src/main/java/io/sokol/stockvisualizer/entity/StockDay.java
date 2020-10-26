@@ -14,7 +14,7 @@ public class StockDay {
     private long id;
 
     @ManyToOne
-    private Stock stock;
+    private Company company;
 
     private LocalDate date;
     private double open;
@@ -23,12 +23,12 @@ public class StockDay {
     private double close;
     private double volume;
 
-    public Stock getStock() {
-        return stock;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setStock(Stock stock) {
-        this.stock = stock;
+    public void setCompany(Company stock) {
+        this.company = company;
     }
 
     public LocalDate getDate() {
@@ -83,7 +83,7 @@ public class StockDay {
     public String toString() {
         return "StockDay{" +
                 "id=" + id +
-                ", stock=" + stock +
+                ", company=" + company +
                 ", date=" + date +
                 ", open=" + open +
                 ", high=" + high +

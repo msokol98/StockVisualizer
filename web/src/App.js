@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
 import Home from './views/landing';
+
 import Login from 'components/forms/login';
 import Register from 'components/forms/register';
+import Portal from 'components/portal/PortalContainer';
+import AddStock from 'components/portal/AddStock';
+
 import Navbar from './components/navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import userContext from 'context/userContext';
@@ -19,6 +23,7 @@ function App() {
           <Navbar />
 
           <div className='has-background-light' style={{minHeight: 'calc(100vh - 70px)'}}>
+            
             <Router>
               <Switch>
                 <Route exact={true} path='/' component={Home} />
@@ -30,6 +35,8 @@ function App() {
                 />
 
                 <Route exact={true} path='/register' component={Register} />
+                <Route exact={true} path='/portal' component={Portal} />
+                <Route exact={true} path='/portal/new' component={AddStock} />
 
               </Switch>
             </Router>

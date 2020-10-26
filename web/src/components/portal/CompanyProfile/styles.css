@@ -1,0 +1,14 @@
+
+.profile {
+    width: 60%;
+    padding: 50px;
+}
+
+.profile-key {
+    text-transform: capitalize;
+}
+
+.profile-padded {
+    padding: 15px 0;
+}
+

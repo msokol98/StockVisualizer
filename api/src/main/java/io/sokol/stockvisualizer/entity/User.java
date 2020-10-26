@@ -7,14 +7,18 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(unique = true, nullable = false)
+    private Long id;
 
     private String firstName;
     private String lastName;
 
     private String email;
     private String password;
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private Portfolio portfolio;
 
     public String getFirstName() {
         return firstName;
@@ -43,8 +47,15 @@ public class User {
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Portfolio getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(Portfolio portfolio) {
+        this.portfolio = portfolio;
     }
 }

@@ -23,7 +23,7 @@ def get_epochs():
     return [today_epoch, tomorrow_epoch]
 
 def fetch_data():
-    f = open("/home/mitchell/Projects/stockvisualizer/api/src/main/resources/symbols.txt", "r")
+    f = open("/home/msokol/Projects/stockvisualizer/api/src/main/resources/symbols.txt", "r")
     symbols = f.read().split("\n")
 
     epochs = get_epochs()
